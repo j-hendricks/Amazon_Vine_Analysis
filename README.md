@@ -6,19 +6,19 @@ In this project, Amazon Vine reviews for various shoes were analyzed to determin
 
 Here is what the shoe reviews look like as a PySpark dataframe: 
 
-![spark_df](spark_dataframe_example.png)
+![spark_df](images/spark_dataframe_example.png)
 
 ## Results
 
-After the data was stored as SQL tables (see example below), the data was manipulated in PySpark such that the proportion of 5 star reviews could be calculated for both the vine reviews and non-vine reviewers. The results were converted into a Pandas dataframe as seen below. 
+After the data was stored as SQL tables (see example below), the data was manipulated in PySpark such that the proportion of 5 star reviews could be calculated for both the vine reviewers and non-vine reviewers. The results were converted into a Pandas dataframe as seen below. 
 
-![sql_table](sql_table_example.png)
+![sql_table](images/sql_table_example.png)
 
-![df](pandas_dataframe.png)
+![df](images/pandas_dataframe.png)
 
-It is evident that the proportion of 5 star reviews are different between paid and unpaid members, but is this difference statistically significant? To determine this, a statistical test of proportions was applied using R to the data in the Pandas dataframe. The results of the test are shown below. The p-value is greater than 0.05, so the test fails to reject the null. In other words, no difference in ratings can be concluded from this data. 
+Out of 22 paid reviews, 13 earned 5 stars (59.1%). Out of  unpaid 26,987 reviews, 14,475 earned 5 starts (53.6%). It is evident that the proportion of 5 star reviews is larger for paid compared to unpaid members, but is this difference statistically significant? To determine this, a statistical test of proportions was applied using R. The results of the test are shown below. The p-value is 0.765, which is greater than 0.05. Therefore, the test fails to reject the null. In other words, no difference in ratings can be concluded from this data. 
 
-![stat_results](stat_test_results.png)
+![stat_results](images/stat_test_results.png)
 
 ## Summary
 
